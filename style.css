@@ -1,0 +1,149 @@
+/* Base Theme Variables */
+:root {
+  --bg: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --accent: #ff6ec4;
+  --accent2: #7873f5;
+  --text-color: #222;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg);
+  color: var(--text-color);
+  transition: 0.4s ease;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  background: linear-gradient(to right, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+select, button {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+  background: white;
+  cursor: pointer;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.upload {
+  margin: 20px 0;
+}
+
+#drop-area {
+  border: 2px dashed var(--accent);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  background: var(--card-bg);
+}
+
+#fileInput {
+  margin-top: 10px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.chart-box {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+canvas {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+.table-preview {
+  margin-top: 40px;
+}
+
+.table-preview h2 {
+  margin-bottom: 10px;
+}
+
+#dataTable {
+  overflow-x: auto;
+}
+
+#dataTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#dataTable th, #dataTable td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/* THEMES */
+body[data-theme='pastel'] {
+  --bg: linear-gradient(to right, #fdfbfb, #ebedee);
+  --card-bg: #ffffffcc;
+  --accent: #a18cd1;
+  --accent2: #fbc2eb;
+  --text-color: #333;
+}
+
+body[data-theme='vivid'] {
+  --bg: linear-gradient(to right, #f83600, #f9d423);
+  --card-bg: #fff8f0ee;
+  --accent: #ff6f61;
+  --accent2: #f9a825;
+  --text-color: #111;
+}
+
+body[data-theme='cyberpunk'] {
+  --bg: linear-gradient(to right, #20002c, #cbb4d4);
+  --card-bg: rgba(30, 30, 60, 0.85);
+  --accent: #39ff14;
+  --accent2: #ff00c8;
+  --text-color: #eee;
+}
+
+body[data-theme='dark'] {
+  --bg: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  --card-bg: rgba(50, 50, 50, 0.85);
+  --accent: #00c9ff;
+  --accent2: #92fe9d;
+  --text-color: #eee;
+}

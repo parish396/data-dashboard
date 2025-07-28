@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌈 DataVista Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 DataVista</h1>
+      <div class="toolbar">
+        <select id="themeSelector">
+          <option value="pastel">Pastel</option>
+          <option value="vivid">Vivid</option>
+          <option value="cyberpunk">Cyberpunk</option>
+          <option value="dark">Dark</option>
+        </select>
+        <button id="downloadChart">📥 Download PNG</button>
+        <select id="chartType">
+          <option value="bar">Bar</option>
+          <option value="line">Line</option>
+          <option value="pie">Pie</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="upload">
+      <div id="drop-area">
+        <p>📂 Drag & Drop CSV/JSON file here</p>
+        <input type="file" id="fileInput" accept=".csv,.json" />
+      </div>
+    </section>
+
+    <section id="chartsContainer" class="chart-grid"></section>
+
+    <section class="table-preview">
+      <h2>📋 Data Preview</h2>
+      <div id="dataTable"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
